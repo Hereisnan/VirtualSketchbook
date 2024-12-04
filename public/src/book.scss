@@ -42,6 +42,7 @@ body {
   display: flex;
   perspective: 1200px;
   
+  // each book page, class->book__page
   &__page {
     position: relative;
     width: 50%;
@@ -59,47 +60,58 @@ body {
       height: auto;
     }
 
+    // first page, book__page--1
     &--1 {
       cursor: pointer;
       overflow: hidden;
     }
     
-    &--2 {
+    // second and third page, book__page--2and3
+    &--2and3 {
+      position: absolute;
+      right: 0;
+      pointer-events: none;
+      transform-style: preserve-3d;
+    }
+
+    // fourth and fifth page, book__page--4and5
+    &--4and5 {
       position: absolute;
       right: 0;
       pointer-events: none;
       transform-style: preserve-3d;
     }
     
-    &--4 {
+    // last page
+    &--6 {
       cursor: pointer;
     }
     
-    &-front {
+    // specific page 2, flip, front
+    &-2 {
       position: absolute;
       transform: rotateY(0deg) translateZ(1px);
     }
     
-    &-back {
+    // specific page 3, flip, back
+    &-3 {
       position: absolute;
       transform: rotateY(180deg) translateZ(1px);
     }
-    
-    .page__content {
-      padding: var(--baseline);
-      // height: 100%;
-      position: relative;
-      text-align: center;
-    }
-    .page__number {
+
+    // specific page 4, flip, front
+    &-4 {
       position: absolute;
-      bottom: var(--baseline);
-      width: calc(100% - (var(--baseline) * 2));
-      font-family: var(--title);
-      font-size: calc(var(--base-size) * 0.67);
-      text-align: center;
+      transform: rotateY(0deg) translateZ(1px);
+    }
+    
+    // specific page 5, flip, front
+    &-5 {
+      position: absolute;
+      transform: rotateY(180deg) translateZ(1px);
     }
   }
+
   
   input[type="radio"] {
     display: none;

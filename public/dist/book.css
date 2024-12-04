@@ -59,35 +59,36 @@ body {
   cursor: pointer;
   overflow: hidden;
 }
-.book__page--2 {
+.book__page--2and3 {
   position: absolute;
   right: 0;
   pointer-events: none;
   transform-style: preserve-3d;
 }
-.book__page--4 {
+.book__page--4and5 {
+  position: absolute;
+  right: 0;
+  pointer-events: none;
+  transform-style: preserve-3d;
+}
+.book__page--6 {
   cursor: pointer;
 }
-.book__page-front {
+.book__page-2 {
   position: absolute;
   transform: rotateY(0deg) translateZ(1px);
 }
-.book__page-back {
+.book__page-3 {
   position: absolute;
   transform: rotateY(180deg) translateZ(1px);
 }
-.book__page .page__content {
-  padding: var(--baseline);
-  position: relative;
-  text-align: center;
-}
-.book__page .page__number {
+.book__page-4 {
   position: absolute;
-  bottom: var(--baseline);
-  width: calc(100% - var(--baseline) * 2);
-  font-family: var(--title);
-  font-size: calc(var(--base-size) * 0.67);
-  text-align: center;
+  transform: rotateY(0deg) translateZ(1px);
+}
+.book__page-5 {
+  position: absolute;
+  transform: rotateY(180deg) translateZ(1px);
 }
 .book input[type=radio] {
   display: none;

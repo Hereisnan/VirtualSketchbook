@@ -12,36 +12,42 @@
   <div class="cover">
     <div class="book">
       <!-- clickable control page for the radio input-->
+      <!-- Static cover page, not meant to flip -->
+
       <label for="page-1" class="book__page book__page--1">
         <img src="images/display/image37.png" alt="green lantern corps in Halloween">
       </label>
-      <label for="page-2" class="book__page book__page--4">
-        <img src="images/display/image30.png" alt="Shining">
+
+      <label for="page-4and5" class="book__page book__page--6">
+        <img src="images/display/image18.png" alt="Ending image">
       </label>
 
       <!-- Resets the page -->
       <input type="radio" name="page" id="page-1" />
-      <!-- Goes to the second page -->
-      <input type="radio" name="page" id="page-2" />
 
-      <!-- a container for front and back content of a page-->
-      <label class="book__page book__page--2">
-        <div class="book__page-front">
+      <!-- Goes to the second page -->
+      <input type="radio" name="page" id="page-2and3" />
+      <!-- a container for front(p2) and back(p3) content of a page-->
+      <label for="page-2and3" class="book__page book__page--2and3">
+        <div class="book__page-2">
           <img src="images/display/image36.png" alt="">
         </div>
-        <div class="book__page-back">
+        <div class="book__page-3">
           <img src="images/display/image14.png" alt="">
         </div>
       </label>
 
-      <!-- <label class="book__page book__page--3">
-        <div class="book__page-front">
-          <img src="images/display/image16.png" alt="New Image Front">
+      
+      <input type="radio" name="page" id="page-4and5" />
+      <label class="book__page book__page--4and5">
+        <div class="book__page-4">
+          <img src="images/display/image30.png" alt="New Image Front">
         </div>
-        <div class="book__page-back">
-          <img src="images/display/image18.png" alt="New Image Back">
+        <div class="book__page-5">
+          <img src="images/display/image16.png" alt="New Image Back">
         </div>
-      </label> -->
+      </label>
+
 
     </div>
   </div>
