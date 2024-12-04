@@ -1,0 +1,54 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Sketchbooks Display
+    link(rel="stylesheet" href="dist/style.css")
+  body
+    .main-content
+      h1 
+        | Nanshan Notebooks
+        small :D Hover on any notebook...
+      
+      // deliver to sketchbook.html
+      .nanshan-wrapper
+        a(href="sketchbook.html")
+          .nanshan-notebook
+            .notebook-cover
+              .notebook-skin Fall 2024
+            .notebook-page
+        h4 Plain
+
+      // second book
+      .nanshan-wrapper
+        a(href="book.html")
+          .nanshan-notebook
+            .notebook-cover.blue
+              .notebook-skin Doodles
+            .notebook-page.ruled
+        h4 Ruled
+
+      // third book
+      .nanshan-wrapper
+        a(href="book3.html")
+          .nanshan-notebook
+            .notebook-cover.yellow
+              .notebook-skin Spring 2025
+            .notebook-page.squared
+        h4 Squared
+
+      .nanshan-wrapper
+        .nanshan-notebook
+          .notebook-cover.green
+            .notebook-skin Past works
+          .notebook-page.dotted
+        h4 Dotted
+      
+      footer
+        a(href="https://twitter.com/meowlivia_" target="_blank")
+          i.icon-social-twitter.icons
+        a(href="https://github.com/oliviale" target="_blank")
+          i.icon-social-github.icons
+        a(href="https://dribbble.com/oliviale" target="_blank")
+          i.icon-social-dribbble.icons

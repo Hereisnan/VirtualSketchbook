@@ -1,0 +1,18 @@
+{
+  "name": "virtualsketchbook",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch:sass": "sass --watch public/src:public/dist",
+    "watch:pug": "pug --watch public/src --out public/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}

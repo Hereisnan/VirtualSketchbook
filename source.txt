@@ -1,0 +1,24 @@
+mobile app (ios)
+https://code.tutsplus.com/create-a-3d-page-folding-animation-page-sketch-spine-fold-effect--mobile-13473t
+
+
+https://freefrontend.com/css-book-effects/
+
+https://codepen.io/oliviale/pen/bLYQQE
+https://codepen.io/diemoritat/pen/LKROYZ
+
+Tutorial on Flip Book Animation using Pure CSS | Transition Effect | Codeera
+(good beginning animation)
+https://www.youtube.com/watch?v=CPRDd2fb9go
+
+(pretty basic flipping book)
+蓝色简单本子翻页
+https://www.youtube.com/watch?v=W6K26i9FwZU
+https://www.winterwind.com/tutorials/css/3
+
+（也是白色简单本子翻页）
+https://www.youtube.com/watch?v=CPRDd2fb9go
+
+（带箭头的，实在弄不好可以从这个开始）
+Let's make a Flip Book using HTML CSS JavaScript (Step by Step Guide)
+https://www.youtube.com/watch?v=0kD6ff2J3BQ
