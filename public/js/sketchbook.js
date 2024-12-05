@@ -1,39 +1,66 @@
-document.addEventListener('DOMContentLoaded', function () {
-    // 获取页面和控制它们的复选框
-    // var coverCheckbox = document.getElementById('checkbox-cover');
-    var page1Checkbox = document.getElementById('checkbox-page1');
-    var page2Checkbox = document.getElementById('checkbox-page2');
-    var page3Checkbox = document.getElementById('checkbox-page3');
+async function loadImages() {
+  try {
+    // fetch the local image data json file
+    const response = await fetch("imageData.json");
+    const images = await response.json();
 
-    // 添加点击事件监听器到页面的标签
-    // document.querySelector('.cover label').onclick = function() {
-    //     coverCheckbox.checked = !coverCheckbox.checked;
-    //     console.log("cover label") 
-    // };
+    // get in book, start making pages
+    const book = document.querySelector(".book");
 
-    document.querySelector('#page1 .next').onclick = function() {
-        page1Checkbox.checked = true;
-        console.log("page1 next")
-    };
-    document.querySelector('#page1 .prev').onclick = function() {
-        page1Checkbox.checked = false;
-        console.log("page1 prev")
-    };
+    // Ensure the new page is on the top of the previous one
+    let zIndex = 98; 
+    images.forEach((imgSrc, index) => {
+      // first create check box for each page
+      const checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.id = `checkbox-page${index + 1}`;
+      document.body.appendChild(checkbox); 
 
-    document.querySelector('#page2 .next').onclick = function() {
-        page2Checkbox.checked = true;
-        console.log("page2 next")
-    };
-    document.querySelector('#page2 .prev').onclick = function() {
-        page2Checkbox.checked = false;
-        console.log("page2 prev")
-    };
+      // Second create page
+      const page = document.createElement("div");
+      page.className = "page";
+      page.id = `page${index + 1}`;
+      page.style.zIndex = zIndex--; 
 
-    document.querySelector('#page3 .next').onclick = function() {
-        page3Checkbox.checked = true;
-    };
-    // Uncomment and edit if there is a previous label in page3
-    // document.querySelector('#page3 .prev').onclick = function() {
-    //     page3Checkbox.checked = false;
-    // };
-});
+      // Each page should contain one front side and one back one
+      const frontPage = document.createElement("div");
+      frontPage.className = "front-page";
+      const image1 = document.createElement("img");
+      image1.src = imgSrc;
+      frontPage.appendChild(image1);
+
+      const backPage = document.createElement("div");
+      backPage.className = "back-page";
+      const image2 = document.createElement("img");
+      image2.src = images[(index + 1) % images.length];
+      backPage.appendChild(image2);
+
+      // get two sides together -> a page!
+      page.appendChild(frontPage);
+      page.appendChild(backPage);
+
+      const labelNext = document.createElement("label");
+      labelNext.className = "next";
+      labelNext.htmlFor = checkbox.id; //`checkbox-page${index + 1}`;
+      labelNext.innerHTML = '<i class="fas fa-chevron-right"></i>';
+
+      const labelPrev = document.createElement("label");
+      labelPrev.className = "prev";
+      labelPrev.htmlFor = checkbox.id; //`checkbox-page${index + 1}`;
+      labelPrev.innerHTML = '<i class="fas fa-chevron-left"></i>';
+
+      frontPage.appendChild(labelNext);
+      backPage.appendChild(labelPrev);
+
+      book.appendChild(page);
+
+      console.log(book);  
+      console.log(page);  
+
+    });
+  } catch (error) {
+    console.error("Failed to load images:", error);
+  }
+}
+
+loadImages();

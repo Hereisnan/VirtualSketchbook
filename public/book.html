@@ -6,52 +6,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sketchbook</title>
   <link rel="stylesheet" href="dist/book.css">
+  <script src="js/book.js" defer></script>
+  <script src="http://kit.fontawesome.com/1cad54f882.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <div class="cover">
-    <div class="book">
-      <!-- clickable control page for the radio input-->
-      <!-- Static cover page, not meant to flip -->
+  <!-- Previous Button -->
+  <button id="prev-btn">
+    <i class="fa-solid fa-circle-arrow-left"></i>
+  </button>
 
-      <label for="page-1" class="book__page book__page--1">
-        <img src="images/display/image37.png" alt="green lantern corps in Halloween">
-      </label>
 
-      <label for="page-4and5" class="book__page book__page--6">
-        <img src="images/display/image18.png" alt="Ending image">
-      </label>
-
-      <!-- Resets the page -->
-      <input type="radio" name="page" id="page-1" />
-
-      <!-- Goes to the second page -->
-      <input type="radio" name="page" id="page-2and3" />
-      <!-- a container for front(p2) and back(p3) content of a page-->
-      <label for="page-2and3" class="book__page book__page--2and3">
-        <div class="book__page-2">
-          <img src="images/display/image36.png" alt="">
+  <!-- Book -->
+  <div id="book" class="book">
+    <!-- Paper 1 -->
+    <div id="p1" class="paper">
+      <div class="front">
+        <div id="f1" class="front-content">
+          <h1>Front 1</h1>
         </div>
-        <div class="book__page-3">
-          <img src="images/display/image14.png" alt="">
+      </div>
+      <div class="back">
+        <div id="b1" class="back-content">
+          <h1>Back 1</h1>
         </div>
-      </label>
-
-      
-      <input type="radio" name="page" id="page-4and5" />
-      <label class="book__page book__page--4and5">
-        <div class="book__page-4">
-          <img src="images/display/image30.png" alt="New Image Front">
+      </div>
+    </div>
+    <!-- Paper 2 -->
+    <div id="p2" class="paper">
+      <div class="front">
+        <div id="f2" class="front-content">
+          <h1>Front 2</h1>
         </div>
-        <div class="book__page-5">
-          <img src="images/display/image16.png" alt="New Image Back">
+      </div>
+      <div class="back">
+        <div id="b2" class="back-content">
+          <h1>Back 2</h1>
         </div>
-      </label>
-
-
+      </div>
+    </div>
+    <!-- Paper 3 -->
+    <div id="p3" class="paper">
+      <div class="front">
+        <div id="f3" class="front-content">
+          <h1>Front 3</h1>
+        </div>
+      </div>
+      <div class="back">
+        <div id="b3" class="back-content">
+          <h1>Back 3</h1>
+        </div>
+      </div>
     </div>
   </div>
-  <a href="index.html" class="back-button">Back to Notebooks</a>
+
+  <!-- Next Button -->
+  <button id="next-btn">
+    <i class="fas fa-arrow-circle-right"></i>
+  </button>
 </body>
 
 </html>
