@@ -26,11 +26,25 @@ function updateZIndexesPrev(currentPageIndex) {
   });
 }
 
+function preloadImages(images) {
+  const loadedImages = [];
+  images.forEach(imageData => {
+    const img = new Image();
+    img.src = imageData.src;
+    loadedImages.push(img);
+  });
+  return loadedImages;
+}
+
 async function loadImages() {
   try {
     // fetch the local image data json file
-    const response = await fetch("imageData.json");
+    const response = await fetch("../imageData.json");
     const images = await response.json();
+
+    console.log(images);
+
+    // const preloadedImages = preloadImages(images);
 
     // get in book, start making pages
     const book = document.querySelector(".book");
@@ -66,15 +80,19 @@ async function loadImages() {
       // Each page should contain one front side and one back one
       const frontPage = document.createElement("div");
       frontPage.className = "front-page";
-      const image1 = document.createElement("img");
-      image1.src = images[index];
-      frontPage.appendChild(image1);
+      // const image1 = document.createElement("img");
+      // image1.src = images[index].src;
+      // frontPage.appendChild(image1);
+
+      addImageToPage(frontPage, images[index]);
 
       const backPage = document.createElement("div");
       backPage.className = "back-page";
-      const image2 = document.createElement("img");
-      image2.src = images[index + 1];
-      backPage.appendChild(image2);
+      // const image2 = document.createElement("img");
+      // image2.src = images[index + 1].src;
+      // backPage.appendChild(image2);
+
+      addImageToPage(backPage, images[index + 1]);
 
       // get two sides together -> a page!
       page.appendChild(frontPage);
@@ -101,13 +119,27 @@ async function loadImages() {
             transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);
         }`, styleSheet.sheet.cssRules.length);
 
-      console.log("Checkbox ID:", checkbox.id);
-      console.log("Page ID:", page.id);
+      // console.log("Checkbox ID:", checkbox.id);
+      // console.log("Page ID:", page.id);
 
     }
   } catch (error) {
     console.error("Failed to load images:", error);
   }
+}
+
+function addImageToPage(container, imageData) {
+  const normalImg = document.createElement("img");
+  normalImg.src = imageData.src;
+  container.appendChild(normalImg);
+
+  // if (imageData.width / imageData.height !== container.offsetWidth / container.offsetHeight) {
+  //   const enlargedImg = document.createElement("img");
+  //   enlargedImg.src = imageData.src;
+  //   enlargedImg.style.width = "100%";
+  //   enlargedImg.style.height = "auto";
+  //   container.appendChild(enlargedImg);
+  // }
 }
 
 loadImages();

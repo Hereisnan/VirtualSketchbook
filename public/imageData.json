@@ -1,21 +1,158 @@
 [
-    "images/display/image1.png",
-    "images/display/image8.png",
-    "images/display/image14.png",
-    "images/display/image16.png",
-    "images/display/image18.png",
-    "images/display/image26.png",
-    "images/display/image27.png",
-    "images/display/image28.png",
-    "images/display/image29.png",
-    "images/display/image30.png",
-    "images/display/image31.png",
-    "images/display/image32.png",
-    "images/display/image35.jpeg",
-    "images/display/image36.png",
-    "images/display/image37.png",
-    "images/display/image41.jpg",
-    "images/display/image42.jpeg",
-    "images/display/image43.png",
-    "images/display/image44.png"
+    {
+        "src": "./images/image1.png",
+        "width": 2480,
+        "height": 3508
+    },
+    {
+        "src": "./images/image14.png",
+        "width": 3508,
+        "height": 2480
+    },
+    {
+        "src": "./images/image45.png",
+        "width": 2000,
+        "height": 2000
+    },
+    {
+        "src": "./images/image16.png",
+        "width": 2000,
+        "height": 2000
+    },
+    {
+        "src": "./images/image18.png",
+        "width": 2000,
+        "height": 2000
+    },
+    {
+        "src": "./images/image27.png",
+        "width": 2000,
+        "height": 2000
+    },
+    {
+        "src": "./images/image28.png",
+        "width": 2000,
+        "height": 2000
+    },
+    {
+        "src": "./images/image29.png",
+        "width": 3508,
+        "height": 2480
+    },
+    {
+        "src": "./images/image30.png",
+        "width": 3508,
+        "height": 2480
+    },
+
+    {
+        "src": "./images/image36.png",
+        "width": 3508,
+        "height": 2480
+    },
+    {
+        "src": "./images/image37.png",
+        "width": 3508,
+        "height": 2480
+    },
+    {
+        "src": "./images/image31.png",
+        "width": 2480,
+        "height": 3508
+    },
+    {
+        "src": "./images/image32.png",
+        "width": 2480,
+        "height": 3508
+    },
+
+    {
+        "src": "./images/image41.jpg",
+        "width": 1890,
+        "height": 1417
+    },
+    {
+        "src": "./images/image42.jpeg",
+        "width": 1890,
+        "height": 1417
+    },
+    {
+        "src": "./images/image38.png",
+        "width": 2000,
+        "height": 2000
+    },
+    {
+        "src": "./images/image40.png",
+        "width": 2000,
+        "height": 2000
+    },
+
+
+    {
+        "src": "./images/image44.png",
+        "width": 2480,
+        "height": 3508
+    },
+
+    {
+        "src": "./images/image23.png",
+        "width": 2000,
+        "height": 2000
+    },
+    {
+        "src": "./images/image5.png",
+        "width": 2000,
+        "height": 2000
+    },
+    {
+        "src": "./images/image19.png",
+        "width": 2000,
+        "height": 2000
+    },
+    {
+        "src": "./images/image20.png",
+        "width": 2000,
+        "height": 2000
+    },
+    {
+        "src": "./images/image4.png",
+        "width": 2000,
+        "height": 2000
+    },
+    {
+        "src": "./images/image7.png",
+        "width": 2000,
+        "height": 2000
+    },
+    {
+        "src": "./images/image3.png",
+        "width": 2000,
+        "height": 2000
+    },
+    {
+        "src": "./images/image13.png",
+        "width": 2000,
+        "height": 2000
+    },
+    {
+        "src": "./images/image33.png",
+        "width": 2000,
+        "height": 2000
+    },
+
+    {
+        "src": "./images/image8.png",
+        "width": 3508,
+        "height": 2480
+    },
+    {
+        "src": "./images/image43.png",
+        "width": 2000,
+        "height": 2000
+    },
+    {
+        "src": "./images/image35.jpeg",
+        "width": 2000,
+        "height": 2000
+    }
 ]

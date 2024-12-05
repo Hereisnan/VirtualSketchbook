@@ -3,15 +3,16 @@ html(lang="en")
   head
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    title Sketchbooks Display
+    title Nanshan Sketchbooks
     link(rel="stylesheet" href="dist/style.css")
-    //- link(rel="stylesheet" href="dist/doodle.css")
-    script(src='js/doodle.js', defer)
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css2?family=Londrina+Sketch&family=Quicksand:wght@300;400;500;600;700&display=swap')
+
+    //- script(src='js/doodle.js', defer)
   body
     .main-content
-      h1 
+      h1(style='font-family: "Londrina Sketch", cursive; font-size: 2rem') 
         | Nanshan Sketchbooks
-        small :D Choose one!
+        small(style='font-family: "Quicksand", sans-serif; font-weight: 500;') :D Choose one!
       
       // deliver to sketchbook.html
       .nanshan-wrapper
@@ -20,41 +21,33 @@ html(lang="en")
             .notebook-cover
               .notebook-skin Fall 2024
             .notebook-page
-        h4 Plain
+        h4 Sep - Dec
 
       // second book
       .nanshan-wrapper
-        a(href="book.html")
+        a(href="bookWinter.html")
           .nanshan-notebook
             .notebook-cover.blue
-              .notebook-skin Doodles
+              .notebook-skin Winter 2025
             .notebook-page.ruled
-        h4 Ruled
+        h4 Dec - Jan
 
       // third book
       .nanshan-wrapper
-        a(href="book3.html")
+        a(href="bookSpring.html")
           .nanshan-notebook
             .notebook-cover.yellow
               .notebook-skin Spring 2025
             .notebook-page.squared
-        h4 Squared
+        h4 Jan - May
 
       .nanshan-wrapper
-        .nanshan-notebook
-          .notebook-cover.green
-            .notebook-skin Past works
-          .notebook-page.dotted
-        h4 Dotted
+        a(href="bookSummer.html")
+          .nanshan-notebook
+            .notebook-cover.green
+              .notebook-skin Summer 2025
+            .notebook-page.dotted
+        h4 May - Sep
       
       .image-container 
-      
-      //- footer
-        //- a(href="https://twitter.com/meowlivia_" target="_blank")
-        //-   i.icon-social-twitter.icons
-        //- a(href="https://github.com/oliviale" target="_blank")
-        //-   i.icon-social-github.icons
-        //- a(href="https://dribbble.com/oliviale" target="_blank")
-        //-   i.icon-social-dribbble.icons
-    //- script(src='js/doodle.js')
   

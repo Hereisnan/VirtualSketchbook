@@ -1,186 +1,271 @@
 body {
-    font-family: "Poppin", sans-serif;
-    background-color: #2e3537;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .go-back {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    color: white; 
-    font-size: 24px; 
-    text-decoration: none; 
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px 15px;
-    border-radius: 25px; 
-  }
-  
-  .go-back:hover {
-    background-color: rgba(0, 0, 0, 0.7); /* 鼠标悬停时改变背景色 */
-  }
-  
-  /* h1 {
-      color: #fff;
-    width: 100%;
-    margin: 0 auto 1.5em;
-    font-size: 30px;
-  }
-  h1 small {
-    text-transform: none;
-    display: block;
-    margin: 20px 0;
-    font: 300 20px "QuickSand", sans-serif;
-    color: #999;
-  } */
-  
-  .book {
-    width: 350px;
-    height: 450px;
-    position: relative;
-    transition: transform 1s;
-    perspective: 1200px;
-  }
-  
-  input {
-    display: none;
-  }
-  
-  .cover,
-  .back-cover {
-    background-color: #a54141;
+  font-family: "Poppin", sans-serif;
+  background-color: #2e3537;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.go-back {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 15px;
+  border-radius: 25px;
+}
+
+.go-back:hover {
+  background-color: rgba(0, 0, 0, 0.7); 
+}
+
+.book {
+  /* width: 350px;
+    height: 450px; */
+  width: 450px;
+  height: 450px;
+  position: relative;
+  transition: transform 1s;
+  perspective: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.white-text {
+    color: white;
+    font-family: 'Londrina Sketch', cursive;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+input {
+  display: none;
+}
+
+.cover,
+.back-cover {
+  background-color: #cc4b48;
+  background-image: linear-gradient(
+    90deg,
+    #a44241 0%,
+    rgba(247, 247, 247, 0) 18%
+  );
+
+  width: 100%;
+  height: 100%;
+  border-radius: 0 15px 15px 0;
+  box-shadow: 0 0 5px rgb(41, 41, 41);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-origin: center left;
+}
+
+#winter{
+    background-color: #2e95aa;
     background-image: linear-gradient(
-      90deg,
-      #883434 0%,
-      rgba(247, 247, 247, 0) 18%
-    );
-  
-    width: 100%;
-    height: 100%;
-    border-radius: 0 15px 15px 0;
-    box-shadow: 0 0 5px rgb(41, 41, 41);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform-origin: center left;
-  }
-  
-  .cover {
-    position: absolute;
-    z-index: 99;
-    transition: transform 1s;
-  }
-  
-  .cover label {
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-  }
-  
-  .back-cover {
-    position: relative;
-    z-index: -1;
-  }
-  
-  .page {
-    z-index: 1;
-    position: absolute;
-    background-color: white;
-    width: 330px;
-    height: 430px;
-    top: 10px;  
-    left: 10px;
-    transform-origin: 0% 50%;
-    border-radius: 0 15px 15px 0;
-    transform-style: preserve-3d;
+        90deg,
+        #308192 0%,
+        rgba(247, 247, 247, 0) 18%
+      );
+}
+
+#spring{
+    background-color: #fed754;
     background-image: linear-gradient(
+        90deg,
+        #eac95b 0%,
+        rgba(247, 247, 247, 0) 18%
+      );
+}
+
+#summer{
+    background-color: #abc3b5;
+    background-image: linear-gradient(
+        90deg,
+        #8ca898 0%,
+        rgba(247, 247, 247, 0) 18%
+      );
+}
+
+.cover {
+  position: absolute;
+  z-index: 99;
+  transition: transform 1s, opacity 0.1s ease, visibility 0.1s ease;
+}
+
+.cover label {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.cover:hover {
+  transform: rotateY(-50deg);
+  z-index: 999;
+  box-shadow: 20px 10px 50px rgba(0, 0, 0, 0.2);
+}
+
+.back-cover {
+  position: relative;
+  z-index: -1;
+}
+
+#white {
+  position: absolute;
+  bottom: 45%;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #e8e8e0;
+}
+
+#green {
+  position: absolute;
+  bottom: 40%;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background-color: #cddc39;
+}
+
+.strip-text {
+  color: #333;
+  font-size: 20px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+#white,
+#green,
+.strip-text {
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  opacity: 1;
+  visibility: visible;
+}
+.page {
+  z-index: 1;
+  position: absolute;
+  background-image: url("../images/cosmic-eyes.jpg");
+  background-size: cover;
+  /* background-position: center; */
+  box-shadow: inset 0 0 10px #000000; /* 添加内阴影效果 */
+  /* background-color: white; */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* width: 330px;
+    height: 430px; */
+  width: 430px;
+  height: 430px;
+  top: 10px;
+  left: 3px;
+  transform-origin: 0% 50%;
+  border-radius: 0 15px 15px 0;
+  transform-style: preserve-3d;
+  /* background-image: linear-gradient(
         90deg,
         rgba(227, 227, 227, 1) 0%,
         rgba(247, 247, 247, 0) 18%
-      );
-      transform: rotateY(0deg);
-      transition-duration: 1.5s;
-      transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);
-
+      ); */
+  transform: rotateY(0deg);
+  transition-duration: 1.5s;
+  transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-  /* .page {
-    transform: rotateY(0deg);
-    transition-duration: 1.5s;
-    transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);
-  } */
-  
-  .page img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    max-height: 100%;
-  }
-  
-  .front-page {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    box-sizing: border-box;
-  }
-  
-  .front-page img {
-    border-radius: 0 15px 15px 0;
-  }
-  
-  .back-page {
-    transform: rotateY(180deg);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    /* z-index: 99; */
-  }
-  
-  .back-page img {
-    border-radius: 15px 0 0 15px;
-  }
-  
-  .next,
-  .prev {
-    position: absolute;
-    bottom: 1em;
-    cursor: pointer;
-  }
-  
-  .next {
-    right: 1em;
-  }
-  .prev {
-    left: 1em;
-  }
-  
-  #checkbox-cover:checked ~ .book {
-    transform: translateX(200px);
-  }
-  #checkbox-cover:checked ~ .book .cover {
-    transition: transform 1.5s, z-index 0.5s 0.5s;
-    transform: rotateY(-180deg);
-    z-index: 1;
-  }
-  #checkbox-cover:checked ~ .book .page {
-    box-shadow: 0 0 3px rgb(99, 98, 98);
-  }
+#winter-page {
+    background-image: url("../images/christmas.jpg");
+}
+#spring-page {
+    background-image: url("../images/flower-head.png");
+}
 
-  /* input[id^="checkbox-page"]:checked ~ .book .page {
-    transform: rotateY(-180deg);
-    transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);
-} */
+#summer-page {
+    background-image: url("../images/tv.jpg");
+}
 
-  /* #checkbox-page1:checked ~ .book #page1 {
-    transform: rotateY(-180deg);
-    z-index: 2;
+.page img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.front-page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  box-sizing: border-box;
+}
+
+.front-page img {
+  border-radius: 0 15px 15px 0;
+}
+
+.back-page {
+  transform: rotateY(180deg);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  /* z-index: 99; */
+}
+
+.back-page img {
+  border-radius: 15px 0 0 15px;
+}
+
+.next,
+.prev {
+  position: absolute;
+  bottom: 1em;
+  cursor: pointer;
+}
+
+.next i,
+.prev i {
+  color: white;
+}
+
+.next {
+  right: 1em;
+}
+.prev {
+  left: 1em;
+}
+
+#checkbox-cover:checked ~ .book {
+  transform: translateX(200px);
+}
+#checkbox-cover:checked ~ .book .cover {
+  transition: transform 1.5s, z-index 0.5s 0.5s;
+  transform: rotateY(-180deg);
+  z-index: 1;
+}
+#checkbox-cover:checked ~ .book .page {
+  box-shadow: 0 0 3px rgb(99, 98, 98);
+}
+
+#checkbox-cover:checked ~ .book .cover #white,
+#checkbox-cover:checked ~ .book .cover #green,
+#checkbox-cover:checked ~ .book .cover .strip-text {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@media (max-width: 600px) {
+  .strip-text {
+    font-size: 14px;
+    padding-left: 10px;
   }
-  #checkbox-page2:checked ~ .book #page2 {
-    transform: rotateY(-180deg);
-    z-index: 3;
-  } */
+}
