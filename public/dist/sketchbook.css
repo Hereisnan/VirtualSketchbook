@@ -171,10 +171,10 @@ body {
     box-shadow: 0 0 3px rgb(99, 98, 98);
   }
 
-  input[id^="checkbox-page"]:checked ~ .book .page {
+  /* input[id^="checkbox-page"]:checked ~ .book .page {
     transform: rotateY(-180deg);
     transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);
-}
+} */
 
   /* #checkbox-page1:checked ~ .book #page1 {
     transform: rotateY(-180deg);

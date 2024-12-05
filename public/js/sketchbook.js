@@ -8,32 +8,35 @@ async function loadImages() {
     const book = document.querySelector(".book");
     const bookParent = book.parentNode; // ensure position
 
+    const styleSheet = document.createElement("style");
+    document.head.appendChild(styleSheet);
+
     // Ensure the new page is on the top of the previous one
     let zIndex = 98; 
-    images.forEach((imgSrc, index) => {
+    for (let index = 0; index < images.length; index += 2) { 
       // first create check box for each page
       const checkbox = document.createElement("input");
       checkbox.type = "checkbox";
-      checkbox.id = `checkbox-page${index + 1}`;
+      checkbox.id = `checkbox-page${index / 2 + 1}`;
       bookParent.insertBefore(checkbox, book);  
 
       // Second create page
       const page = document.createElement("div");
       page.className = "page";
-      page.id = `page${index + 1}`;
+      page.id = `page${index / 2 + 1}`;
       page.style.zIndex = zIndex--; 
 
       // Each page should contain one front side and one back one
       const frontPage = document.createElement("div");
       frontPage.className = "front-page";
       const image1 = document.createElement("img");
-      image1.src = imgSrc;
+      image1.src = images[index];
       frontPage.appendChild(image1);
 
       const backPage = document.createElement("div");
       backPage.className = "back-page";
       const image2 = document.createElement("img");
-      image2.src = images[(index + 1) % images.length];
+      image2.src = images[index + 1];
       backPage.appendChild(image2);
 
       // get two sides together -> a page!
@@ -55,10 +58,16 @@ async function loadImages() {
 
       book.appendChild(page);
 
+      styleSheet.sheet.insertRule(`
+        #${checkbox.id}:checked ~ .book #page${index / 2 + 1} {
+            transform: rotateY(-180deg);
+            transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);
+        }`, styleSheet.sheet.cssRules.length);
+
       console.log("Checkbox ID:", checkbox.id);
       console.log("Page ID:", page.id);
 
-    });
+    }
   } catch (error) {
     console.error("Failed to load images:", error);
   }
