@@ -1,3 +1,2 @@
 # VirtualSketchbook
-INST630-Final project
-Project is in the Master branch!
+INST630-Final project is in the Master branch! I've just found that I didn't commit to the main branch.
