@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nanshan Sketchbooks</title>
-    <link rel="stylesheet" href="./dist/style.css">
+    <base href="/VirtualSketchbook/">
+    <link rel="stylesheet" href="dist/style.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Londrina+Sketch&amp;family=Quicksand:wght@300;400;500;600;700&amp;display=swap">
     <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
@@ -19,7 +20,7 @@
                 style="font-family: 'Quicksand', sans-serif; font-weight: 500;">:D Choose one!</small></h1>
         <!-- deliver to sketchbook.html-->
         <div class="nanshan-wrapper" role="link" aria-label="Open Fall 2024 Sketchbook">
-            <a href="./sketchbook.html">
+            <a href="public/sketchbook.html">
                 <div class="nanshan-notebook">
                     <div class="notebook-cover">
                         <div class="notebook-skin">Fall 2024</div>
@@ -64,7 +65,7 @@
         </div>
         <div class="image-container"> </div>
     </div>
-    <script src="./js/threeD.js"></script>
+    <script src="js/threeD.js" defer></script>
 </body>
 
 </html>
