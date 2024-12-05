@@ -1,3 +1,31 @@
+function updateZIndexesNext(currentPageIndex) {
+  const pages = document.querySelectorAll('.page');
+  let highestZIndex = 98; // 
+  pages.forEach((page, index) => {
+    if (index === currentPageIndex) {
+      page.style.zIndex = highestZIndex;
+    } else if (index < currentPageIndex) {
+      page.style.zIndex = highestZIndex - (currentPageIndex - index);
+    } else {
+      page.style.zIndex = highestZIndex - (index - currentPageIndex);
+    }
+  });
+}
+
+function updateZIndexesPrev(currentPageIndex) {
+  const pages = document.querySelectorAll('.page');
+  let highestZIndex = 98; // 
+  pages.forEach((page, index) => {
+    if (index === currentPageIndex) {
+      page.style.zIndex = highestZIndex;
+    } else if (index < currentPageIndex) {
+      page.style.zIndex = highestZIndex - (currentPageIndex - index);
+    } else {
+      page.style.zIndex = highestZIndex - (index - currentPageIndex);
+    }
+  });
+}
+
 async function loadImages() {
   try {
     // fetch the local image data json file
@@ -16,6 +44,15 @@ async function loadImages() {
     for (let index = 0; index < images.length; index += 2) { 
       // first create check box for each page
       const checkbox = document.createElement("input");
+      
+      checkbox.addEventListener('change', () => {
+        if (checkbox.checked) {
+          updateZIndexesNext(index / 2);
+        } else{
+          updateZIndexesPrev(index / 2);
+        }
+      });
+
       checkbox.type = "checkbox";
       checkbox.id = `checkbox-page${index / 2 + 1}`;
       bookParent.insertBefore(checkbox, book);  
