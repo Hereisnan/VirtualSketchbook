@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/sketchbook', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'sketchbook.html'));
+  res.sendFile(path.join(__dirname, 'sketchbook.html'));
 });
 
 app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
