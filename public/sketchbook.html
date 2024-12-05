@@ -11,19 +11,18 @@
 </head>
 
 <body>
-
-  <a href="index.html" class="go-back"><i class="fas fa-arrow-left"></i></a>
-
-  <!-- <h1>FALL 2024<small>Sep - Dec</small></h1> -->
-
-  <input type="checkbox" id="checkbox-cover">
-  <!-- <input type="checkbox" id="checkbox-page1">
-  <input type="checkbox" id="checkbox-page2">
-  <input type="checkbox" id="checkbox-page3"> -->
+  <nav>
+    <a href="index.html" class="go-back">
+      <i class="fas fa-arrow-left" aria-hidden="true">
+      </i>
+      <span class="sr-only">Back to Home</span>
+    </a>
+  </nav>
+  <input type="checkbox" id="checkbox-cover" aria-label="Toggle cover page">
 
   <div class="book">
     <div class="cover">
-      <label for="checkbox-cover"></label>
+      <label for="checkbox-cover" aria-hidden="true"></label>
 
       <div class="cover-strip" id="white">
         <div class="strip-text">FALL 2024</div>

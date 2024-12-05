@@ -2,36 +2,39 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sketchbook</title>
-  <link rel="stylesheet" href="dist/sketchbook.css">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Londrina+Sketch&family=Quicksand:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sketchbook</title>
+    <link rel="stylesheet" href="dist/sketchbook.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Londrina+Sketch&family=Quicksand:wght@300;400;500;600;700&display=swap">
 </head>
 <script src="http://kit.fontawesome.com/1cad54f882.js" crossorigin="anonymous"></script>
 
 <body>
-  <a href="index.html" class="go-back"><i class="fas fa-arrow-left"></i></a>
+    <nav>
+        <a href="index.html" class="go-back">
+          <i class="fas fa-arrow-left" aria-hidden="true">
+          </i>
+          <span class="sr-only">Back to Home</span>
+        </a>
+      </nav>
+    <input type="checkbox" id="checkbox-cover" aria-label="Toggle cover page">
+    <div class="book">
+        <div class="cover" id="summer">
+            <label for="checkbox-cover" aria-hidden="true"></label>
 
-  <input type="checkbox" id="checkbox-cover">
-  <div class="book">
-    <div class="cover" id="summer">
-      <label for="checkbox-cover"></label>
-
-      <div class="cover-strip" id="white">
-        <div class="strip-text">SUMMER 2025</div>
-      </div>
-      <div class="cover-strip" id="green"></div>
+            <div class="cover-strip" id="white">
+                <div class="strip-text">SUMMER 2025</div>
+            </div>
+            <div class="cover-strip" id="green"></div>
+        </div>
+        <div class="page" id="summer-page">
+            <p class="white-text">"♫⋆"</p>
+        </div>
+        <div class="back-cover" id="summer">
+        </div>
     </div>
-    <div class="page" id="summer-page">
-      <p class="white-text">"♫⋆"</p>
-    </div>
-    <div class="back-cover" id="summer">
-    </div>
-  </div>
-  <!-- <script src="js/sketchbook.js" defer></script> -->
+    <!-- <script src="js/sketchbook.js" defer></script> -->
 </body>
 
 </html>
