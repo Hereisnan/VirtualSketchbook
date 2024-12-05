@@ -159,18 +159,6 @@ body {
     left: 1em;
   }
   
-  /* #page1 {
-    z-index: 3;
-  }
-  
-  #page2 {
-    z-index: 2;
-  }
-  
-  #page3 {
-    z-index: 1;
-  } */
-  
   #checkbox-cover:checked ~ .book {
     transform: translateX(200px);
   }
@@ -179,10 +167,16 @@ body {
     transform: rotateY(-180deg);
     z-index: 1;
   }
-  /* #checkbox-cover:checked ~ .book .page {
+  #checkbox-cover:checked ~ .book .page {
     box-shadow: 0 0 3px rgb(99, 98, 98);
   }
-  #checkbox-page1:checked ~ .book #page1 {
+
+  input[id^="checkbox-page"]:checked ~ .book .page {
+    transform: rotateY(-180deg);
+    transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+  /* #checkbox-page1:checked ~ .book #page1 {
     transform: rotateY(-180deg);
     z-index: 2;
   }
@@ -190,8 +184,3 @@ body {
     transform: rotateY(-180deg);
     z-index: 3;
   } */
-
-  input[id^="checkbox-page"]:checked ~ .book .page {
-    transform: rotateY(-180deg);
-    transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);
-}

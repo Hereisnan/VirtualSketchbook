@@ -6,6 +6,7 @@ async function loadImages() {
 
     // get in book, start making pages
     const book = document.querySelector(".book");
+    const bookParent = book.parentNode; // ensure position
 
     // Ensure the new page is on the top of the previous one
     let zIndex = 98; 
@@ -14,7 +15,7 @@ async function loadImages() {
       const checkbox = document.createElement("input");
       checkbox.type = "checkbox";
       checkbox.id = `checkbox-page${index + 1}`;
-      document.body.appendChild(checkbox); 
+      bookParent.insertBefore(checkbox, book);  
 
       // Second create page
       const page = document.createElement("div");
@@ -54,8 +55,8 @@ async function loadImages() {
 
       book.appendChild(page);
 
-      console.log(book);  
-      console.log(page);  
+      console.log("Checkbox ID:", checkbox.id);
+      console.log("Page ID:", page.id);
 
     });
   } catch (error) {
