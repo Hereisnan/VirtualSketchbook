@@ -5,11 +5,13 @@ html(lang="en")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     title Sketchbooks Display
     link(rel="stylesheet" href="dist/style.css")
+    //- link(rel="stylesheet" href="dist/doodle.css")
+    script(src='js/doodle.js', defer)
   body
     .main-content
       h1 
         | Nanshan Notebooks
-        small :D Hover on any notebook...
+        small :D Choose one!
       
       // deliver to sketchbook.html
       .nanshan-wrapper
@@ -45,10 +47,14 @@ html(lang="en")
           .notebook-page.dotted
         h4 Dotted
       
-      footer
-        a(href="https://twitter.com/meowlivia_" target="_blank")
-          i.icon-social-twitter.icons
-        a(href="https://github.com/oliviale" target="_blank")
-          i.icon-social-github.icons
-        a(href="https://dribbble.com/oliviale" target="_blank")
-          i.icon-social-dribbble.icons
+      .image-container 
+      
+      //- footer
+        //- a(href="https://twitter.com/meowlivia_" target="_blank")
+        //-   i.icon-social-twitter.icons
+        //- a(href="https://github.com/oliviale" target="_blank")
+        //-   i.icon-social-github.icons
+        //- a(href="https://dribbble.com/oliviale" target="_blank")
+        //-   i.icon-social-dribbble.icons
+    //- script(src='js/doodle.js')
+  

@@ -4,21 +4,42 @@ $color-orange: #cc4b48;
 $color-gray: #c1c1c1;
 $color-green: #abc3b5;
 
-body {
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100vh;
   background: #222;
   color: #fff;
   font-family: 'Quicksand', sans-serif;
   font-size: 18px;
 }
 
+.image-container {
+  position: absolute;
+  // height: 100vh;  
+  // width: 100vw;
+  overflow: hidden;
+  top: 0;
+  left: 0; 
+  z-index: 0;
+}
+
 .main-content {
+  position: relative;
+  min-height: 100vh; 
   margin: 5em auto;
+  // margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
   text-transform: uppercase;
+  z-index: 1;
 }
+
+
 
 h1 {
   width: 100%;
@@ -213,3 +234,12 @@ footer {
   }
 }
 
+@media (max-width: 600px) {
+  .main-content {
+    min-height: 750px;
+  }
+  .nanshan-notebook{
+    height: 200px;
+    width: 140px;
+  }
+}
