@@ -132,14 +132,6 @@ function addImageToPage(container, imageData) {
   const normalImg = document.createElement("img");
   normalImg.src = imageData.src;
   container.appendChild(normalImg);
-
-  // if (imageData.width / imageData.height !== container.offsetWidth / container.offsetHeight) {
-  //   const enlargedImg = document.createElement("img");
-  //   enlargedImg.src = imageData.src;
-  //   enlargedImg.style.width = "100%";
-  //   enlargedImg.style.height = "auto";
-  //   container.appendChild(enlargedImg);
-  // }
 }
 
 loadImages();
