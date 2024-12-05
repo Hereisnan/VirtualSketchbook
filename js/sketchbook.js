@@ -39,7 +39,7 @@ function preloadImages(images) {
 async function loadImages() {
   try {
     // fetch the local image data json file
-    const response = await fetch("imageData.json");
+    const response = await fetch("js/imageData.json");
     const images = await response.json();
 
     console.log(images);
@@ -131,6 +131,7 @@ async function loadImages() {
 function addImageToPage(container, imageData) {
   const normalImg = document.createElement("img");
   normalImg.src = imageData.src;
+  console.log(normalImg.src);
   container.appendChild(normalImg);
 }
 
